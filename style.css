@@ -107,12 +107,26 @@ button:active{
     font-weight:bold;
 }
 
-.logo {
-    width: 150px;
-    border-radius: 50%;
-    margin-top: 20px;
-}
 .developer{
-    margin-top:50px;
+    margin-top:40px;      /* Change this value to increase/decrease the gap */
     text-align:center;
+}
+
+.developer h2{
+    margin-bottom:20px;
+}
+
+.logo{
+    width:150px;
+    border-radius:50%;
+    margin-bottom:20px;
+    transition:.2s;
+}
+
+.logo:hover{
+    transform:scale(1.05);
+}
+
+#copyright{
+    color:#f5e05a;
 }
