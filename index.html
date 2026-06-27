@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Numle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Numle</h1>
+    <p class="subtitle">Guess the hidden number</p>
+
+    <div class="game">
+
+        <div id="display">
+            _ _ _ _
+        </div>
+
+        <input
+            id="main_input"
+            type="text"
+            maxlength="4"
+            placeholder="Enter 4 digits">
+
+        <button onclick="check()">Guess</button>
+
+        <div id="message">
+            Good luck!
+        </div>
+
+    </div>
+
+</div>
+<script src="index.js"></script>
+</body>
+</html>
