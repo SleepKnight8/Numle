@@ -8,14 +8,14 @@
 body{
     background:linear-gradient(135deg,#14191f,#202832);
     min-height:100vh;
+    color:#ffd54f;
 
     display:flex;
-    justify-content:center;
+    flex-direction:column;
     align-items:center;
 
-    color:white;
+    padding:40px 20px;
 }
-
 .container{
     width:380px;
     text-align:center;
@@ -90,12 +90,10 @@ button{
 
     cursor:pointer;
 
-    transition:.2s;
 }
 
 button:hover{
     background:#ffca28;
-    transform:translateY(-2px);
 }
 
 button:active{
@@ -107,4 +105,14 @@ button:active{
     min-height:24px;
     color:#ffd54f;
     font-weight:bold;
+}
+
+.logo {
+    width: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.developer{
+    margin-top:50px;
+    text-align:center;
 }
