@@ -14,8 +14,8 @@ function random_num_gen(){
         random_num += digit;
         solve_pos[i] = digit;
     }
-    console.log(random_num);
-    console.log(solve_pos);
+    //console.log(random_num);
+    //console.log(solve_pos);
 }
 
 
@@ -25,8 +25,8 @@ function main_input_pos_func() {
             let digit2 = main_input[i]
             main_input_pos[i] = digit2;
         }
-        console.log(main_input);
-        console.log(main_input_pos);
+        //console.log(main_input);
+        //console.log(main_input_pos);
 }
 
 
