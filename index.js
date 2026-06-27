@@ -9,11 +9,22 @@ let false_in = 0;
 let tries = 8;
 
 function random_num_gen(){
-    for(i = 0; i < 4; i++){
+      while (random_num.length < 4) {
         let digit = Math.floor(Math.random() * 10).toString();
-        random_num += digit;
-        solve_pos[i] = digit;
+
+        if (!random_num.includes(digit)) {
+            random_num += digit;
+        }
     }
+
+    for (let i = 0; i < 4; i++) {
+        solve_pos[i] = random_num[i];
+    }
+    // for(i = 0; i < 4; i++){
+    //     let digit = Math.floor(Math.random() * 10).toString();
+    //     random_num += digit;
+    //     solve_pos[i] = digit;
+    // }
     //console.log(random_num);
     //console.log(solve_pos);
 }
