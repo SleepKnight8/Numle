@@ -8,6 +8,7 @@ let false_pos = 0;
 let false_in = 0;
 let tries = 8;
 let in_check_stat = true;
+let in_type_check = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 
 function random_num_gen(){
       while (random_num.length < 4) {
@@ -38,6 +39,11 @@ function main_input_pos_func() {
         let check_dig = main_input[x]
         main_input_check.add(check_dig);
     }
+    if (!/^\d{4}$/.test(main_input)) {
+        alert("Must use 4 digits only");
+        in_check_stat = false;
+        return;
+    }
     if (main_input_check.size < 4 && main_input.length === 4) {
         alert("Can't use the same number more than once");
         in_check_stat = false;
@@ -51,7 +57,7 @@ function main_input_pos_func() {
     else {
         in_check_stat = true;
         for(let i = 0; i < 4; i++){
-        let digit2 = main_input[i]
+        let digit2 = main_input[i];
         main_input_pos[i] = digit2;
     }
     }
