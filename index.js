@@ -26,8 +26,8 @@ function random_num_gen(){
     //     random_num += digit;
     //     solve_pos[i] = digit;
     // }
-    //console.log(random_num);
-    //console.log(solve_pos);
+    // console.log(random_num); // testing
+    // console.log(solve_pos); // testing
 }
 
 
@@ -56,24 +56,32 @@ function main_input_pos_func() {
     }
     }
 
-    //console.log(main_input);
-    //console.log(main_input_pos);
+    //console.log(main_input); // testing
+    // console.log(main_input_pos); //testing
 }
+
 
 
 function check(){
     main_input_pos_func();
+
+    if (!in_check_stat) {
+        return;
+        }
+
     if (in_check_stat) {
         tries -= 1
-        if (tries < 1) {
-            alert(`Game Over. Correct Code: ${random_num}`)
-            restart();
-            return;
-        } else if (main_input === random_num) {
-            alert("You Won!");
-            restart();
-            return;
         }
+    if (main_input === random_num) {
+        alert("You Won!");
+        restart();
+        return;
+    }
+    if (tries === 0) {
+        alert(`Game Over. Correct Code: ${random_num}`)
+        restart();
+        return;
+    }
         for (let i = 0; i < 4; i++) {
             if (main_input_pos[i] === solve_pos[i]) {
                 true_pos += 1;
@@ -86,7 +94,6 @@ function check(){
         document.getElementById("message").innerHTML = `Correct Pos: ${true_pos}, Wrong Pos: ${false_pos}, Wrong Num: ${false_in} tries left: ${tries}`;
         document.getElementById("display").innerHTML = `${main_input[0]} ${main_input[1]} ${main_input[2]} ${main_input[3]}`;
         erase_game_status();
-    }
 }
 
 function erase_game_status(){
