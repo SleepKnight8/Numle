@@ -8,7 +8,6 @@ let false_pos = 0;
 let false_in = 0;
 let tries = 8;
 let in_check_stat = true;
-let in_type_check = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 
 function random_num_gen(){
       while (random_num.length < 4) {
