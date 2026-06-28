@@ -66,11 +66,11 @@ function check(){
     if (in_check_stat) {
         tries -= 1
         if (tries < 1) {
-            alert("Game over")
+            alert(`Game Over. Correct Code: ${random_num}`)
             restart();
             return;
         } else if (main_input === random_num) {
-            alert("You won!");
+            alert("You Won!");
             restart();
             return;
         }
