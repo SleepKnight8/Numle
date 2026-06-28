@@ -107,6 +107,26 @@ button:active{
     font-weight:bold;
 }
 
+#note{
+    width:100%;
+    min-height:80px;
+    max-height:250px;
+
+    padding:14px;
+
+    border:none;
+    outline:none;
+
+    border-radius:10px;
+
+    background:#151b22;
+    color:#ffd54f;
+
+    font-size:1rem;
+
+    resize:vertical;
+}
+
 .developer{
     margin-top:40px;      /* Change this value to increase/decrease the gap */
     text-align:center;
