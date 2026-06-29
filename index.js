@@ -1,6 +1,6 @@
 let random_num = "";
 let solve_pos = {};
-let main_input;
+let main_input = "";
 let main_input_pos = {};
 
 let true_pos = 0;
@@ -110,6 +110,7 @@ function erase_game_status(){
 
 function restart(){
     random_num = "";
+    main_input = "";
     solve_pos = {};
     main_input_pos = {};
     true_pos = 0;
@@ -120,7 +121,8 @@ function restart(){
     random_num_gen();
     document.getElementById("message").innerHTML = `Deduction is the key`;
     document.getElementById("display").innerHTML = `_ _ _ _`;
-
+    document.getElementById("note").value = "";
+    document.getElementById("main_input").value = "";
 }
 
 random_num_gen();
